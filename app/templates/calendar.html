@@ -2,7 +2,7 @@
 {% block title %} Calendar {% endblock %}
 {% block container %}
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">	
-	<link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+	<link rel="stylesheet" href="static/style.css">
 	<style>
 		.container-fluid{
 			padding-left:12px;
@@ -234,7 +234,7 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script src="static/js/main.js"></script>
 	<script>
 		
 		$('table').on('click', 'td',function(e){
