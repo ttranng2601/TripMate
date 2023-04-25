@@ -13,7 +13,6 @@ def login():
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
         if user == current_user:
-            flash("You're already logged in", category='login-error')
             return redirect(url_for('views.home_page', user=user))
         if user:
             if check_password_hash(user.password, password):
