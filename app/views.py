@@ -27,9 +27,10 @@ def signup_page():
 @login_required
 def calendar():
     date = datetime.date.today().strftime("%m-%d-%Y")
+    userId = current_user.get_id()
     if request.method == 'POST':
         date = request.form.get('selectedDay')
-    tasks = Task.query.filter_by(date=date).all()
+    tasks = Task.query.filter_by(user= userId, date=date, complete = False).all()
     return render_template("calendar.html", date=date, tasks = tasks)
     
 @views.route('/todolist/', methods=['GET', 'POST'])
