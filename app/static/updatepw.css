@@ -29,12 +29,12 @@ header {
 .plane {
     height: 65px;
     width: 80px;
-    background-image: url(Images/TranPlane.png);
+    background-image: url(/static/images/TranPlane.png);
     background-size: cover;
 }
 
 .hero {
-	background-image: url("Images/Background4.jpg");
+	background-image: url("/static/images/Background4.jpg");
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
@@ -153,33 +153,33 @@ footer {
 }
 #FB
 {
-    background: url(Images/Facebook.png);
+    background: url(/static/images/Facebook.png);
     height: 50px;
     width: 50px;
 }
 #FB:hover
 {
-    background: url(Images/FacebookHover.png)
+    background: url(/static/images/FacebookHover.png)
 }
 #TW 
 {
-    background: url(Images/Twitter.png);
+    background: url(/static/images/Twitter.png);
     height: 50px;
     width: 50px;
 }
 #TW:hover 
 {
-    background: url(Images/TwitterHover.png)
+    background: url(/static/images/TwitterHover.png)
 }
 #LN 
 {
-    background: url(Images/Ln.png);
+    background: url(/static/images/Ln.png);
     height: 50px;
     width: 50px;
 }
 #LN:hover 
 {
-    background: url(Images/LnHover.png)
+    background: url(/static/images/LnHover.png)
 }
 
 .alert .inner {
