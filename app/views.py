@@ -54,6 +54,7 @@ def doc(title):
     to_do_list = Todolist.query.filter_by(title=title).first()
     tasks = Task.query.filter_by(todolist=to_do_list.id).all()
     if request.method == 'POST':
+        userId = current_user.get_id()
         todolist= to_do_list.id
         if request.form.get('datepicker') == '':
             date = datetime.date.today().strftime("%m-%d-%Y")
@@ -62,7 +63,7 @@ def doc(title):
         print(date)
         text = request.form.get('text')
         complete = False
-        new_task = Task(todolist=todolist, date=date, text=text, complete=complete)
+        new_task = Task(user = userId, todolist=todolist, date=date, text=text, complete=complete)
         db.session.add(new_task)
         db.session.commit()
         return redirect(url_for('views.doc', title=title))
